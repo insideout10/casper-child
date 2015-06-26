@@ -38,6 +38,7 @@
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
     </nav> 
     
+    <br><br>
     <a class="icon-bars" id="mmenu-toggle">
         <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
     </a>
