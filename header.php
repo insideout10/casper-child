@@ -23,23 +23,22 @@
 <?php wp_head(); ?>
 
 <!-- jquery.mmenu includes -->
-<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.css">
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.min.js"></script>
+<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.all.css">
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.min.all.js"></script>
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/mmenu.js"></script>
 
 </head>
 
-<body <?php body_class(); ?>>
-    
-<nav id="site-navigation" class="main-navigation" role="navigation">
-        <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
-        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-</nav>   
+<body <?php body_class(); ?>>  
 
 <header id="masthead" role="banner" class="site-head site-header" <?php if(get_header_image() ) : ?>style="background-image: url(<?php esc_url(header_image()); ?>);"<?php endif ?>>
     
+    <nav id="site-navigation" class="main-navigation" role="navigation">
+        <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
+        <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+    </nav> 
     
-    <a class="icon-bars" href="#site-navigation">
+    <a class="icon-bars" id="mmenu-toggle">
         <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
     </a>
 

@@ -12,3 +12,18 @@
  Text Domain:  ???
 */
 
+#site-navigation {
+    display: none;
+    z-index: 10000;
+}
+
+#mmenu-toggle {
+    
+}
+
+#masthead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
