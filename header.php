@@ -19,10 +19,13 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<script type='text/javascript' src='js/jquery.particleground.js'></script>
-  <script type='text/javascript' src='js/demo.js'></script>
+
 <?php wp_head(); ?>
 
+<!-- jquery particleground -->
+<script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/particleground-master/jquery.particleground.js'></script>
+  <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/particleground-master/demo.js'></script>
+  
 <!-- jquery.mmenu includes -->
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.all.css">
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.min.all.js"></script>
