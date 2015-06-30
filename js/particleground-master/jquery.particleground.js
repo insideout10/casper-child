@@ -99,7 +99,6 @@
      * Style the canvas
      */
     function styleCanvas() {
-        console.log('haha');
       canvas.width = element.offsetWidth;
       canvas.height = element.offsetHeight;
       ctx.fillStyle = options.dotColor;
@@ -358,7 +357,6 @@
     }
 
     function destroy() {
-      console.log('destroy');
       canvas.parentNode.removeChild(canvas);
       hook('onDestroy');
       if ($) {
