@@ -41,10 +41,6 @@
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
     </nav> 
-    
-    <a class="icon-bars" id="mmenu-toggle">
-        <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
-    </a>
 
     <div class="vertical-row">
         <div class="vertical">
@@ -160,6 +156,9 @@
                         </a>
                     <?php } ?>
                 </div>
+                <a class="icon-bars" id="mmenu-toggle">
+                    <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
+                </a>
                 <h1 class="blog-title"><a class="blog-logo" href='<?php echo esc_url( home_url( '/' ) ); ?>' rel='home'><?php bloginfo( 'name' ); ?></a></h1>
                 <h2 class="blog-description"><?php bloginfo( 'description' ); ?></h2>
             </div>
