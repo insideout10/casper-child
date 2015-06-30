@@ -1,9 +1,7 @@
 jQuery(document).ready(function($){
     
-    // Make mmenu
     $('#site-navigation').mmenu();
     
-    // Toggle menu
     $('#mmenu-toggle').click(function(){
         
         if( $('#site-navigation').hasClass('mmenu-opened') ) {
@@ -13,9 +11,11 @@ jQuery(document).ready(function($){
         }  
     });
     
-    // Click outside menu closes it
+    
     $('body').click(function(e) {
+        console.log($(e.target).attr('id'));
         if(!$(e.target).closest('#site-navigation').length && $(e.target).attr('id') !== 'mmenu-toggle') {
+            console.log(2);
             if( $('#site-navigation').hasClass('mmenu-opened') ) {
                 closeMenu();
             }
