@@ -99,6 +99,7 @@
      * Style the canvas
      */
     function styleCanvas() {
+        console.log('haha');
       canvas.width = element.offsetWidth;
       canvas.height = element.offsetHeight;
       ctx.fillStyle = options.dotColor;
@@ -124,7 +125,7 @@
       };
       // Draw particles
       for (var i = 0; i < particles.length; i++) {
-        particles[i].draw();
+        particles[i].draw(i);
       };
 
       // Call this function next time screen is redrawn
@@ -222,16 +223,29 @@
           this.speed.x += this.speed.y > 0 ? options.minSpeedY : -options.minSpeedY;
           break;
       }
+        
+    }
+      
+      
+      
+    /**
+     * Get random color from palette
+     */
+    Particle.prototype.getRandomColor = function(i) {
+        
+        var r = i % 7;
+        return ["#F20F62","#FF9A2E","#F9F81E","#8FD22A","#642994","ffffff","000000"][r];
     }
 
     /**
      * Draw particle
      */
-    Particle.prototype.draw = function() {
+    Particle.prototype.draw = function(particleID) {
       // Draw circle
       ctx.beginPath();
       ctx.arc(this.position.x + this.parallaxOffsetX, this.position.y + this.parallaxOffsetY, options.particleRadius / 2, 0, Math.PI * 2, true);
       ctx.closePath();
+      ctx.fillStyle = this.getRandomColor(particleID);
       ctx.fill();
 
       // Draw lines

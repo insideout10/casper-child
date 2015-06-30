@@ -17,6 +17,14 @@
     z-index: 10000;
 }
 
+#masthead {
+    padding: 0;
+}
+
+.pg-canvas {
+    position: absolute;
+}
+
 #mmenu-toggle {
     
 }
