@@ -41,6 +41,7 @@
 
     <a class="icon-bars" id="menu-toggle">
         <span><?php _e( 'Menu', 'casper' ); ?></span>
+        <span class="icon-close" id="menu-toggle-x"></span>
     </a>
 
     <div class="vertical-row">

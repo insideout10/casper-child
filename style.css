@@ -35,7 +35,10 @@ body {
     right: -300px;
     width: 300px;
     height: 100%;
-    background-color: #eee;
+    color: #eee;
+    background-color: #222;
+    padding-top: 80px;
+    z-index: 10000;
     
     -webkit-transition: right .4s;
     -o-transition: right .4s;
@@ -50,7 +53,7 @@ body.menu-opened #site-navigation {
     right: 0px;
 }
 
-a:hover{color:#000000!important;}
+a:hover{color:#000000;}
 
 .post-content p {
 	font-size:0.9em!important;
@@ -71,16 +74,43 @@ h1 {
 .post-image img {margin:0; padding:0; width:100%}
 
 #menu-toggle {
-  z-index: 10001;
-  border: 1px solid #000;
-  cursor: pointer;
-  border-radius: 5px;
-  padding: 5px;
-  position: absolute;
-  right: 20px;
-  background-color:#ffffff;
-  top: 20px;
+    z-index: 10001;
+    border: 1px solid #000;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    right: 20px;
+    background-color:#ffffff;
+    top: 20px;
+
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
 }
+
+body.menu-opened #menu-toggle {
+    color: #eee;
+    background-color: #222;
+    margin-right: -100px;
+    border: none;
+}
+
+#menu-toggle-x {
+    display: none;
+}
+
+#menu-toggle a, #menu-toggle a:hover {
+    color: white;
+}
+
+body.menu-opened #menu-toggle-x {
+    display: inline;
+    position: relative;
+    left: 200px;
+    padding-right: -200px;
+}
+
 #masthead {
     padding: 0;
 }
