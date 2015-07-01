@@ -23,6 +23,9 @@ body {
     line-height: 1.75em;
     text-rendering: geometricprecision;	
 }
+
+a:hover{color:#000000!important;}
+
 .post-content p {
 	font-size:0.9em!important;
 	line-height:1.7em;
@@ -46,6 +49,14 @@ line-height:1.15em;
 
 #mmenu-toggle {
     z-index: 10001;
+  border: 1px solid #000;
+  cursor: pointer;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  right: 20px;
+  background-color:#ffffff;
+  top: 20px;
 }
 #masthead {
     padding: 0;
@@ -58,4 +69,13 @@ line-height:1.15em;
 }
 .site-head{ background-color:transparent!important;}
 
-
+body nav.mmenu-opened {
+    opacity: 1;
+    -webkit-transition: -webkit-transform 0.3s ease,
+                        opacity 0s ease 0s;
+            transition: transform 0.3s ease,
+                        opacity 0s ease 0s;
+    -webkit-transform: translate3D(0, 0, 0);
+        -ms-transform: translate3D(0, 0, 0);
+            transform: translate3D(0, 0, 0);
+}

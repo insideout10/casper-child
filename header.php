@@ -24,7 +24,7 @@
 <!-- jquery particleground -->
 <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/particleground-master/jquery.particleground.js'></script>
   <script type='text/javascript' src='<?php echo get_stylesheet_directory_uri(); ?>/js/particleground-master/demo.js'></script>
-  
+
 <!-- jquery.mmenu includes -->
 <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.all.css">
 <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery.mmenu/jquery.mmenu.min.all.js"></script>
@@ -32,17 +32,17 @@
 
 </head>
 
-<body <?php body_class(); ?>>  
+<body <?php body_class(); ?>>
 
 <header id="masthead" role="banner" class="site-head site-header" <?php if(get_header_image() ) : ?>style="background-image: url(<?php esc_url(header_image()); ?>);"<?php endif ?>>
-    
+
     <nav id="site-navigation" class="main-navigation" role="navigation">
         <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'casper' ); ?></a>
         <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-    </nav> 
-    
+    </nav>
+
     <a class="icon-bars" id="mmenu-toggle">
-        <span class="hidden"><?php _e( 'Menu', 'casper' ); ?></span>
+        <span><?php _e( 'Menu', 'casper' ); ?></span>
     </a>
 
     <div class="vertical-row">
